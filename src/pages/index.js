@@ -3,9 +3,11 @@ import { Link, graphql } from 'gatsby'
 import Masonry from 'react-masonry-component'
 import Img from 'gatsby-image'
 import Layout from "../components/layout"
+import Hero from "../components/hero"
 
 const IndexPage = ({ data }) => (
   <Layout>
+    <Hero />
     <Masonry className="showcase">
       {data.allDatoCmsWork.edges.map(({ node: work }) => (
         <div key={work.id} className="showcase__item">
